@@ -3001,6 +3001,202 @@
         }
       ]
     },
+    "social_bg_color": {
+      "label": {
+        "cn": "社交媒体背景色",
+        "en": "Social Media Background Color"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "粉色和勃艮第红",
+          "en": "pink and burgundy"
+        },
+        {
+          "cn": "薄荷绿和珊瑚色",
+          "en": "mint green and coral"
+        },
+        {
+          "cn": "淡紫色和薰衣草色",
+          "en": "lavender and lilac"
+        },
+        {
+          "cn": "天蓝色和白色",
+          "en": "sky blue and white"
+        },
+        {
+          "cn": "金色和奶油色",
+          "en": "gold and cream"
+        },
+        {
+          "cn": "黑色和霓虹粉",
+          "en": "black and neon pink"
+        },
+        {
+          "cn": "橙色和青色渐变",
+          "en": "orange and cyan gradient"
+        },
+        {
+          "cn": "绿色和黄色搭配",
+          "en": "green and yellow combo"
+        },
+        {
+          "cn": "蓝色和紫色混搭",
+          "en": "blue and purple mix"
+        },
+        {
+          "cn": "红色和金色搭配",
+          "en": "red and gold combo"
+        }
+      ]
+    },
+    "social_profile_name": {
+      "label": {
+        "cn": "社交媒体用户名",
+        "en": "Social Media Profile Name"
+      },
+      "category": "other",
+      "options": [
+        {
+          "cn": "@RealMe+",
+          "en": "@RealMe+"
+        },
+        {
+          "cn": "@PromptFill",
+          "en": "@PromptFill"
+        },
+        {
+          "cn": "@CreativeAI",
+          "en": "@CreativeAI"
+        },
+        {
+          "cn": "@ArtLover",
+          "en": "@ArtLover"
+        },
+        {
+          "cn": "@DesignPro",
+          "en": "@DesignPro"
+        },
+        {
+          "cn": "@VisualArtist",
+          "en": "@VisualArtist"
+        },
+        {
+          "cn": "@PhotoMaster",
+          "en": "@PhotoMaster"
+        },
+        {
+          "cn": "@StudioX",
+          "en": "@StudioX"
+        },
+        {
+          "cn": "@CreativeMind",
+          "en": "@CreativeMind"
+        },
+        {
+          "cn": "@DigitalCreator",
+          "en": "@DigitalCreator"
+        }
+      ]
+    },
+    "costume_material": {
+      "label": {
+        "cn": "装扮材质",
+        "en": "Costume Material"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "羊毛",
+          "en": "wool"
+        },
+        {
+          "cn": "毛绒",
+          "en": "plush"
+        },
+        {
+          "cn": "棉质",
+          "en": "cotton"
+        },
+        {
+          "cn": "丝绸",
+          "en": "silk"
+        },
+        {
+          "cn": "天鹅绒",
+          "en": "velvet"
+        },
+        {
+          "cn": "人造毛皮",
+          "en": "faux fur"
+        },
+        {
+          "cn": "缎面",
+          "en": "satin"
+        },
+        {
+          "cn": "牛仔布",
+          "en": "denim"
+        },
+        {
+          "cn": "针织面料",
+          "en": "knit fabric"
+        },
+        {
+          "cn": "亚麻",
+          "en": "linen"
+        }
+      ]
+    },
+    "subway_costume": {
+      "label": {
+        "cn": "地铁装扮类型",
+        "en": "Subway Costume Type"
+      },
+      "category": "character",
+      "options": [
+        {
+          "cn": "粉色羊毛兔子装扮",
+          "en": "Pink wool rabbit costume"
+        },
+        {
+          "cn": "黄色小鸡装扮",
+          "en": "Yellow chick costume"
+        },
+        {
+          "cn": "棕色泰迪熊装扮",
+          "en": "Brown teddy bear costume"
+        },
+        {
+          "cn": "白色熊猫装扮",
+          "en": "White panda costume"
+        },
+        {
+          "cn": "橙色狐狸装扮",
+          "en": "Orange fox costume"
+        },
+        {
+          "cn": "灰色猫咪装扮",
+          "en": "Grey cat costume"
+        },
+        {
+          "cn": "蓝色河马装扮",
+          "en": "Blue hippo costume"
+        },
+        {
+          "cn": "绿色恐龙装扮",
+          "en": "Green dinosaur costume"
+        },
+        {
+          "cn": "紫色独角兽装扮",
+          "en": "Purple unicorn costume"
+        },
+        {
+          "cn": "彩虹色小马装扮",
+          "en": "Rainbow pony costume"
+        }
+      ]
+    },
     "character_heroic": {
       "label": {
         "cn": "人物类型",
@@ -3162,6 +3358,449 @@
         {
           "cn": "便携音箱",
           "en": "Portable Speaker"
+        }
+      ]
+    },
+    "drink_product": {
+      "label": {
+        "cn": "饮料产品",
+        "en": "Drink Product"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "芬达软饮料罐",
+          "en": "Fanta softdrink can"
+        },
+        {
+          "cn": "可口可乐罐",
+          "en": "Coca-Cola can"
+        },
+        {
+          "cn": "百事可乐罐",
+          "en": "Pepsi cola can"
+        },
+        {
+          "cn": "雪碧汽水罐",
+          "en": "Sprite soda can"
+        },
+        {
+          "cn": "红牛能量饮料罐",
+          "en": "Red Bull energy drink can"
+        },
+        {
+          "cn": "啤酒罐",
+          "en": "Beer can"
+        },
+        {
+          "cn": "橙汁瓶",
+          "en": "Orange juice bottle"
+        },
+        {
+          "cn": "运动饮料瓶",
+          "en": "Sports drink bottle"
+        }
+      ]
+    },
+    "drink_action": {
+      "label": {
+        "cn": "饮料动态",
+        "en": "Drink Action"
+      },
+      "category": "action",
+      "options": [
+        {
+          "cn": "爆炸，橙子从罐中涌出",
+          "en": "exploding with oranges bursting from the can"
+        },
+        {
+          "cn": "喷溅，水珠四处飞散",
+          "en": "splashing with water droplets flying everywhere"
+        },
+        {
+          "cn": "溢出，液体从罐口流下",
+          "en": "overflowing with liquid pouring from the rim"
+        },
+        {
+          "cn": "旋转，形成漩涡效果",
+          "en": "spinning creating a swirling vortex effect"
+        },
+        {
+          "cn": "静止摆放，表面凝结水珠",
+          "en": "stationary with condensation droplets on surface"
+        },
+        {
+          "cn": "被打开，罐盖飞起",
+          "en": "being opened with tab flying off"
+        },
+        {
+          "cn": "被挤压，变形扭曲",
+          "en": "being crushed and deformed"
+        },
+        {
+          "cn": "悬浮在空中，周围有气泡",
+          "en": "floating in air surrounded by bubbles"
+        }
+      ]
+    },
+    "drink_background": {
+      "label": {
+        "cn": "饮料拍摄背景",
+        "en": "Drink Photography Background"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "橙色背景",
+          "en": "orange background"
+        },
+        {
+          "cn": "蓝色背景",
+          "en": "blue background"
+        },
+        {
+          "cn": "红色背景",
+          "en": "red background"
+        },
+        {
+          "cn": "渐变橙色背景",
+          "en": "gradient orange background"
+        },
+        {
+          "cn": "渐变蓝绿色背景",
+          "en": "gradient teal background"
+        },
+        {
+          "cn": "纯白色背景",
+          "en": "pure white background"
+        },
+        {
+          "cn": "纯黑色背景",
+          "en": "pure black background"
+        },
+        {
+          "cn": "模糊的城市背景",
+          "en": "blurred city background"
+        }
+      ]
+    },
+    "drink_camera_angle": {
+      "label": {
+        "cn": "饮料拍摄角度",
+        "en": "Drink Camera Angle"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "高角度俯拍橙汁旋转形成的圆弧",
+          "en": "high angle overhead shot capturing the swirling arc of orange juice"
+        },
+        {
+          "cn": "低角度英雄镜头",
+          "en": "low angle heroic shot"
+        },
+        {
+          "cn": "平视正面镜头",
+          "en": "eye-level front shot"
+        },
+        {
+          "cn": "侧面45度镜头",
+          "en": "45-degree side angle shot"
+        },
+        {
+          "cn": "微距特写镜头",
+          "en": "macro close-up shot"
+        },
+        {
+          "cn": "鸟瞰俯视镜头",
+          "en": "bird's eye overhead shot"
+        }
+      ]
+    },
+    "skincare_product": {
+      "label": {
+        "cn": "护肤品产品",
+        "en": "Skincare Product"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "精华滴管瓶",
+          "en": "serum dropper bottle"
+        },
+        {
+          "cn": "面霜罐",
+          "en": "cream jar"
+        },
+        {
+          "cn": "化妆水瓶",
+          "en": "toner bottle"
+        },
+        {
+          "cn": "安瓶",
+          "en": "ampoule"
+        },
+        {
+          "cn": "精华液瓶",
+          "en": "essence bottle"
+        },
+        {
+          "cn": "眼霜罐",
+          "en": "eye cream jar"
+        },
+        {
+          "cn": "防晒霜瓶",
+          "en": "sunscreen bottle"
+        },
+        {
+          "cn": "身体乳瓶",
+          "en": "body lotion bottle"
+        }
+      ]
+    },
+    "skincare_color": {
+      "label": {
+        "cn": "护肤品颜色",
+        "en": "Skincare Product Color"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "粉桃色",
+          "en": "pink-peach colored"
+        },
+        {
+          "cn": "淡粉色",
+          "en": "light pink colored"
+        },
+        {
+          "cn": "透明金色",
+          "en": "transparent golden colored"
+        },
+        {
+          "cn": "淡紫色",
+          "en": "light lavender colored"
+        },
+        {
+          "cn": "薄荷绿色",
+          "en": "mint green colored"
+        },
+        {
+          "cn": "透明无色",
+          "en": "clear transparent colored"
+        },
+        {
+          "cn": "玫瑰粉色",
+          "en": "rose pink colored"
+        },
+        {
+          "cn": "琥珀色",
+          "en": "amber colored"
+        }
+      ]
+    },
+    "fantasy_character_pose": {
+      "label": {
+        "cn": "奇幻人物姿态",
+        "en": "Fantasy Character Pose"
+      },
+      "category": "action",
+      "options": [
+        {
+          "cn": "坐在瓶盖上",
+          "en": "sitting on the bottle cap"
+        },
+        {
+          "cn": "漂浮在瓶身旁边",
+          "en": "floating beside the bottle"
+        },
+        {
+          "cn": "倚靠在瓶身上",
+          "en": "leaning against the bottle"
+        },
+        {
+          "cn": "站在瓶盖边缘",
+          "en": "standing on the edge of the cap"
+        },
+        {
+          "cn": "躺在瓶身上",
+          "en": "lying on top of the bottle"
+        },
+        {
+          "cn": "围绕瓶子飞舞",
+          "en": "dancing around the bottle"
+        },
+        {
+          "cn": "坐在漂浮的水果上",
+          "en": "sitting on floating fruits"
+        },
+        {
+          "cn": "悬停在瓶子上方",
+          "en": "hovering above the bottle"
+        }
+      ]
+    },
+    "fantasy_floating_elements": {
+      "label": {
+        "cn": "奇幻漂浮元素",
+        "en": "Fantasy Floating Elements"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "成熟桃子和桃子切片",
+          "en": "ripe peaches and peach slices"
+        },
+        {
+          "cn": "玫瑰花瓣和花蕾",
+          "en": "rose petals and buds"
+        },
+        {
+          "cn": "闪亮泡泡和星星",
+          "en": "sparkling bubbles and stars"
+        },
+        {
+          "cn": "羽毛和丝绸飘带",
+          "en": "feathers and silk ribbons"
+        },
+        {
+          "cn": "水果切片和浆果",
+          "en": "fruit slices and berries"
+        },
+        {
+          "cn": "水珠和冰晶",
+          "en": "water droplets and ice crystals"
+        },
+        {
+          "cn": "发光光点和火花",
+          "en": "glowing light dots and sparkles"
+        },
+        {
+          "cn": "云朵和彩虹碎片",
+          "en": "clouds and rainbow fragments"
+        }
+      ]
+    },
+    "fantasy_sky_background": {
+      "label": {
+        "cn": "奇幻天空背景",
+        "en": "Fantasy Sky Background"
+      },
+      "category": "location",
+      "options": [
+        {
+          "cn": "明亮清澈的蓝天",
+          "en": "bright clear blue sky"
+        },
+        {
+          "cn": "柔和粉色日落天空",
+          "en": "soft pink sunset sky"
+        },
+        {
+          "cn": "梦幻紫色星空",
+          "en": "dreamy purple starry sky"
+        },
+        {
+          "cn": "温暖金色日出天空",
+          "en": "warm golden sunrise sky"
+        },
+        {
+          "cn": "柔和云层天空",
+          "en": "soft cloudy sky"
+        },
+        {
+          "cn": "渐变橙粉色天空",
+          "en": "gradient orange-pink sky"
+        },
+        {
+          "cn": "雾蒙蒙的晨空",
+          "en": "misty morning sky"
+        },
+        {
+          "cn": "绚丽极光天空",
+          "en": "colorful aurora sky"
+        }
+      ]
+    },
+    "pastel_color_palette": {
+      "label": {
+        "cn": "粉彩色调搭配",
+        "en": "Pastel Color Palette"
+      },
+      "category": "visual",
+      "options": [
+        {
+          "cn": "粉桃色和天蓝色",
+          "en": "pastel peach and sky blue"
+        },
+        {
+          "cn": "淡紫色和粉色",
+          "en": "lavender and pink"
+        },
+        {
+          "cn": "薄荷绿和黄色",
+          "en": "mint green and yellow"
+        },
+        {
+          "cn": "玫瑰色和金色",
+          "en": "rose and gold"
+        },
+        {
+          "cn": "天蓝色和白色",
+          "en": "sky blue and white"
+        },
+        {
+          "cn": "珊瑚色和青色",
+          "en": "coral and teal"
+        },
+        {
+          "cn": "薰衣草色和奶油色",
+          "en": "lavender and cream"
+        },
+        {
+          "cn": "粉色和灰色",
+          "en": "pink and grey"
+        }
+      ]
+    },
+    "fantasy_dress_style": {
+      "label": {
+        "cn": "奇幻连衣裙风格",
+        "en": "Fantasy Dress Style"
+      },
+      "category": "item",
+      "options": [
+        {
+          "cn": "优雅飘逸的连衣裙",
+          "en": "elegant flowing dress"
+        },
+        {
+          "cn": "薄纱仙女裙",
+          "en": "tulle fairy dress"
+        },
+        {
+          "cn": "丝绸礼服裙",
+          "en": "silk evening gown"
+        },
+        {
+          "cn": "雪纺长裙",
+          "en": "chiffon long dress"
+        },
+        {
+          "cn": "蕾丝花边裙",
+          "en": "lace dress"
+        },
+        {
+          "cn": "花瓣裙",
+          "en": "petal dress"
+        },
+        {
+          "cn": "闪亮亮片裙",
+          "en": "sparkling sequin dress"
+        },
+        {
+          "cn": "羽毛装饰裙",
+          "en": "feather-trimmed dress"
         }
       ]
     },
@@ -6433,6 +7072,66 @@
     "dynamic_tracking_shot": {
       "cn": "第三人称紧密跟拍（Third-Person Tight Tracking）",
       "en": "Third-Person Tight Tracking"
+    },
+    "social_bg_color": {
+      "cn": "粉色和勃艮第红",
+      "en": "pink and burgundy"
+    },
+    "social_profile_name": {
+      "cn": "@RealMe+",
+      "en": "@RealMe+"
+    },
+    "costume_material": {
+      "cn": "羊毛",
+      "en": "wool"
+    },
+    "subway_costume": {
+      "cn": "粉色羊毛兔子装扮",
+      "en": "Pink wool rabbit costume"
+    },
+    "drink_product": {
+      "cn": "芬达软饮料罐",
+      "en": "Fanta softdrink can"
+    },
+    "drink_action": {
+      "cn": "爆炸，橙子从罐中涌出",
+      "en": "exploding with oranges bursting from the can"
+    },
+    "drink_background": {
+      "cn": "橙色背景",
+      "en": "orange background"
+    },
+    "drink_camera_angle": {
+      "cn": "高角度俯拍橙汁旋转形成的圆弧",
+      "en": "high angle overhead shot capturing the swirling arc of orange juice"
+    },
+    "skincare_product": {
+      "cn": "精华滴管瓶",
+      "en": "serum dropper bottle"
+    },
+    "skincare_color": {
+      "cn": "粉桃色",
+      "en": "pink-peach colored"
+    },
+    "fantasy_character_pose": {
+      "cn": "坐在瓶盖上",
+      "en": "sitting on the bottle cap"
+    },
+    "fantasy_dress_style": {
+      "cn": "优雅飘逸的连衣裙",
+      "en": "elegant flowing dress"
+    },
+    "fantasy_floating_elements": {
+      "cn": "成熟桃子和桃子切片",
+      "en": "ripe peaches and peach slices"
+    },
+    "fantasy_sky_background": {
+      "cn": "明亮清澈的蓝天",
+      "en": "bright clear blue sky"
+    },
+    "pastel_color_palette": {
+      "cn": "粉桃色和天蓝色",
+      "en": "pastel peach and sky blue"
     }
   },
   "categories": {

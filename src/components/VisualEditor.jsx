@@ -91,7 +91,7 @@ export const VisualEditor = React.forwardRef(({
         onClick={() => {
           if (onInteraction) onInteraction();
         }}
-        className={`w-full h-full overflow-y-auto overflow-x-hidden flex flex-col transition-colors duration-300 ${isDarkMode ? 'bg-[#2A2928]' : 'bg-white'}`}
+        className={`w-full h-full overflow-y-auto overflow-x-hidden flex flex-col transition-colors duration-300 ${isDarkMode ? 'bg-[#2A2928]' : 'bg-[#FBF5EE]/80'}`}
       >
         {/* Mobile Header in Scrollable Area */}
         <div className="px-6 pt-10 pb-6 shrink-0">

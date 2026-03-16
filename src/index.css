@@ -3,10 +3,20 @@
 @tailwind utilities;
 
 body {
-  background: linear-gradient(180deg, #F4ECE4 69%, #F7DED1 100%);
-  background-attachment: fixed;
+  background-color: #F0E0CC;
   margin: 0;
   min-height: 100vh;
+}
+
+@keyframes popoverIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* Custom Scrollbar Styles */
@@ -335,10 +345,250 @@ body {
   will-change: transform;
 }
 
-/* 全局最底层背景色（浅色模式） */
+/* 全局最底层背景色（浅色模式）— 顶浅底深打底色 */
 .mesh-gradient-bg {
-  background: linear-gradient(180deg, #F4ECE4 69%, #F7DED1 100%);
-  background-attachment: fixed;
+  background: linear-gradient(180deg, #F8F0EA 0%, #F0E0CC 100%);
+  position: relative;
+}
+
+/* Mesh gradient orb container */
+.mesh-orbs-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Shared base */
+.mesh-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  will-change: transform, background-color;
+  /* alternate 让动画自动反向，天然 pingpong，无跳帧 */
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* Orb 1 — 顶部左，白 → 腮红 */
+.mesh-orb-1 {
+  width: 65%;
+  height: 60%;
+  top: -12%;
+  left: -8%;
+  animation-name: orbAnim1;
+  animation-duration: 7s;
+  animation-delay: 0s;
+}
+
+/* Orb 2 — 顶部右，象牙 → 浅橙 */
+.mesh-orb-2 {
+  width: 60%;
+  height: 55%;
+  top: -8%;
+  right: -8%;
+  animation-name: orbAnim2;
+  animation-duration: 9s;
+  animation-delay: -3s;
+}
+
+/* Orb 3 — 中部，琥珀漂移 */
+.mesh-orb-3 {
+  width: 70%;
+  height: 60%;
+  top: 28%;
+  left: 10%;
+  animation-name: orbAnim3;
+  animation-duration: 8s;
+  animation-delay: -5s;
+}
+
+/* Orb 4 — 底部右，橙 → 砖红 */
+.mesh-orb-4 {
+  width: 65%;
+  height: 70%;
+  bottom: -15%;
+  right: -8%;
+  animation-name: orbAnim4;
+  animation-duration: 6s;
+  animation-delay: -1.5s;
+}
+
+/* Orb 5 — 底部左，橙红漂移 */
+.mesh-orb-5 {
+  width: 60%;
+  height: 65%;
+  bottom: -12%;
+  left: -8%;
+  animation-name: orbAnim5;
+  animation-duration: 10s;
+  animation-delay: -7s;
+}
+
+/* pingpong 单程定义，alternate 自动反向 */
+
+/* Orb 1：顶左，奶白 → 浅粉，上下波动为主 */
+@keyframes orbAnim1 {
+  0%   { transform: translate(0px, 0px) scale(1);      background-color: rgba(250, 242, 235, 0.40); }
+  100% { transform: translate(20px, 55px) scale(1.06); background-color: rgba(242, 210, 195, 0.35); }
+}
+
+/* Orb 2：顶右，米白 → 浅杏，上下波动 */
+@keyframes orbAnim2 {
+  0%   { transform: translate(0px, 0px) scale(1);       background-color: rgba(248, 238, 225, 0.38); }
+  100% { transform: translate(-15px, 60px) scale(1.05); background-color: rgba(238, 205, 170, 0.32); }
+}
+
+/* Orb 3：中部，浅琥珀，小幅波浪 */
+@keyframes orbAnim3 {
+  0%   { transform: translate(0px, 0px) scale(1);       background-color: rgba(232, 195, 148, 0.28); }
+  100% { transform: translate(25px, -50px) scale(1.05); background-color: rgba(220, 170, 115, 0.24); }
+}
+
+/* Orb 4：底右，稍深橙，上下波动幅度大（唯一稍重的锚点） */
+@keyframes orbAnim4 {
+  0%   { transform: translate(0px, 0px) scale(1);        background-color: rgba(210, 130, 70, 0.36); }
+  100% { transform: translate(-18px, -70px) scale(1.07); background-color: rgba(195, 105, 48, 0.30); }
+}
+
+/* Orb 5：底左，浅暖橙，上下为主 */
+@keyframes orbAnim5 {
+  0%   { transform: translate(0px, 0px) scale(1);       background-color: rgba(225, 175, 120, 0.25); }
+  100% { transform: translate(22px, -60px) scale(1.05); background-color: rgba(215, 155, 95, 0.22); }
+}
+
+/* ── Nebula cluster — 右下角星云锚点 ── */
+
+/* 尺寸较小，模糊半径各异，互相错位叠加 */
+.mesh-nebula-1 {
+  width: 35%;
+  height: 38%;
+  bottom: 2%;
+  right: 5%;
+  filter: blur(55px);
+  animation-name: nebulaAnim1;
+  animation-duration: 5s;
+  animation-delay: -1s;
+}
+
+.mesh-nebula-2 {
+  width: 28%;
+  height: 32%;
+  bottom: 8%;
+  right: 18%;
+  filter: blur(40px);
+  animation-name: nebulaAnim2;
+  animation-duration: 7s;
+  animation-delay: -3.5s;
+}
+
+.mesh-nebula-3 {
+  width: 22%;
+  height: 28%;
+  bottom: 15%;
+  right: 8%;
+  filter: blur(30px);
+  animation-name: nebulaAnim3;
+  animation-duration: 4s;
+  animation-delay: -0.8s;
+}
+
+.mesh-nebula-4 {
+  width: 18%;
+  height: 22%;
+  bottom: 5%;
+  right: 28%;
+  filter: blur(25px);
+  animation-name: nebulaAnim4;
+  animation-duration: 6s;
+  animation-delay: -2s;
+}
+
+.mesh-nebula-5 {
+  width: 14%;
+  height: 18%;
+  bottom: 20%;
+  right: 15%;
+  filter: blur(18px);
+  animation-name: nebulaAnim5;
+  animation-duration: 3.5s;
+  animation-delay: -1.2s;
+}
+
+/* 星云锚点：3 个颜色停靠点，alternate pingpong，途经玫瑰粉 / 琥珀 / 赭石 */
+@keyframes nebulaAnim1 {
+  0%   { transform: translate(0px, 0px) scale(1);        background-color: rgba(215, 108, 58, 0.44); }
+  50%  { transform: translate(-12px, -22px) scale(1.06); background-color: rgba(242, 155, 88, 0.38); }
+  100% { transform: translate(-22px, -38px) scale(1.10); background-color: rgba(228, 88, 98, 0.32); }
+}
+
+@keyframes nebulaAnim2 {
+  0%   { transform: translate(0px, 0px) scale(1);       background-color: rgba(238, 145, 72, 0.40); }
+  40%  { transform: translate(10px, -25px) scale(0.96); background-color: rgba(252, 198, 118, 0.34); }
+  100% { transform: translate(18px, -45px) scale(0.90); background-color: rgba(195, 88, 62, 0.38); }
+}
+
+@keyframes nebulaAnim3 {
+  0%   { transform: translate(0px, 0px) scale(1);        background-color: rgba(185, 95, 42, 0.48); }
+  45%  { transform: translate(-15px, 18px) scale(1.08);  background-color: rgba(245, 165, 85, 0.38); }
+  100% { transform: translate(-28px, 30px) scale(1.14);  background-color: rgba(222, 110, 128, 0.32); }
+}
+
+@keyframes nebulaAnim4 {
+  0%   { transform: translate(0px, 0px) scale(1);       background-color: rgba(248, 178, 98, 0.36); }
+  55%  { transform: translate(14px, -16px) scale(0.92); background-color: rgba(210, 95, 52, 0.42); }
+  100% { transform: translate(25px, -28px) scale(0.86); background-color: rgba(238, 168, 105, 0.30); }
+}
+
+@keyframes nebulaAnim5 {
+  0%   { transform: translate(0px, 0px) scale(1);        background-color: rgba(205, 112, 55, 0.42); }
+  38%  { transform: translate(-8px, 20px) scale(1.10);   background-color: rgba(235, 88, 80, 0.34); }
+  100% { transform: translate(-15px, 35px) scale(1.16);  background-color: rgba(248, 188, 115, 0.36); }
+}
+
+/* ── Grain — 全局背景层噪点，覆盖整个 mesh-gradient-bg ── */
+.mesh-noise-svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* 噪点贴在 mesh-gradient-bg 的 ::after 上，覆盖完整背景 */
+.mesh-gradient-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.68' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 250px 250px;
+  mix-blend-mode: overlay;
+}
+
+/* orbs 容器内的噪点 div 不再需要，保留为空（兼容 JSX 结构） */
+.mesh-grain-overlay {
+  display: none;
+}
+
+/* ── Panel glass — 浅色模式面板毛玻璃背板 ── */
+/* 用 ::before 承载渐变色，主元素只负责 backdrop-blur，两者叠加出带色调的磨砂效果 */
+.panel-glass-light {
+  position: relative;
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 250, 245, 0.58) 0%,
+    rgba(248, 232, 215, 0.50) 100%
+  ) !important;
+  border: 1px solid rgba(255, 255, 255, 0.50) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    0 2px 24px rgba(180, 120, 80, 0.08);
 }
 
 .dark-gradient-bg {

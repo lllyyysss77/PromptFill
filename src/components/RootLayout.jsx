@@ -79,6 +79,39 @@ export const RootLayout = ({ children }) => {
         isDarkMode ? 'dark-mode dark-gradient-bg' : 'mesh-gradient-bg'
       }`}
     >
+      {/* Mesh gradient orbs — light mode only, each animates independently */}
+      {!isDarkMode && (
+        <div className="mesh-orbs-container" aria-hidden="true">
+          {/* SVG noise filter for grain texture */}
+          <svg className="mesh-noise-svg" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="mesh-noise" x="0%" y="0%" width="100%" height="100%" colorInterpolationFilters="sRGB">
+                <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" result="noise" />
+                <feColorMatrix type="saturate" values="0" in="noise" result="grayNoise" />
+                <feBlend in="SourceGraphic" in2="grayNoise" mode="soft-light" result="blended" />
+                <feComposite in="blended" in2="SourceGraphic" operator="in" />
+              </filter>
+            </defs>
+          </svg>
+
+          {/* Base orbs — full viewport coverage */}
+          <div className="mesh-orb mesh-orb-1" />
+          <div className="mesh-orb mesh-orb-2" />
+          <div className="mesh-orb mesh-orb-3" />
+          <div className="mesh-orb mesh-orb-4" />
+          <div className="mesh-orb mesh-orb-5" />
+
+          {/* Nebula cluster — bottom-right chaos orbs */}
+          <div className="mesh-orb mesh-nebula-1" />
+          <div className="mesh-orb mesh-nebula-2" />
+          <div className="mesh-orb mesh-nebula-3" />
+          <div className="mesh-orb mesh-nebula-4" />
+          <div className="mesh-orb mesh-nebula-5" />
+
+          {/* Grain overlay — covers entire container */}
+          <div className="mesh-grain-overlay" />
+        </div>
+      )}
       {!isMobileDevice && (
         <Sidebar
           activeTab={isVideoPage ? 'video' : (isSettingPage ? 'settings' : activeHomeTab)}
@@ -101,7 +134,7 @@ export const RootLayout = ({ children }) => {
       
       {!isMobileDevice && <DarkModeLamp isDarkMode={isDarkMode} />}
 
-      <div className="flex-1 h-full min-w-0 min-h-0 flex flex-col relative">
+      <div className="flex-1 h-full min-w-0 min-h-0 flex flex-col relative z-[1]">
         {children}
       </div>
     </div>

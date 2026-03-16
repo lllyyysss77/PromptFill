@@ -318,7 +318,7 @@ export const EditorToolbar = ({
         onClose={() => setIsDebugPanelOpen(false)}
       />
     )}
-    <div className={`flex flex-col border-b backdrop-blur-md flex-shrink-0 z-20 ${isDarkMode ? 'border-white/5 bg-white/5 text-gray-300' : 'border-gray-200 bg-white/80'}`}>
+    <div className={`flex flex-col border-b backdrop-blur-md flex-shrink-0 z-20 ${isDarkMode ? 'border-white/5 bg-white/5 text-gray-300' : 'border-[#D8C8B8]/60 bg-[#F0E4D8]/70'}`}>
       {/* 第一行：撤销/重做 & 插入按钮 */}
       <div className="h-14 flex items-center justify-between px-4">
         <div className="flex items-center gap-3">
@@ -483,7 +483,7 @@ export const EditorToolbar = ({
 
       {/* 移动端折叠面板：联动组选择 */}
       {isMobile && isGroupsExpanded && (
-        <div className={`px-4 py-4 border-t animate-in slide-in-from-top-1 duration-200 ${isDarkMode ? 'border-white/5 bg-black/20' : 'border-gray-100 bg-gray-50/50'}`}>
+        <div className={`px-4 py-4 border-t animate-in slide-in-from-top-1 duration-200 ${isDarkMode ? 'border-white/5 bg-black/20' : 'border-[#D8C8B8]/60 bg-[#F0E4D8]/60'}`}>
           <div className="flex flex-col gap-4">
             <div className="flex items-center justify-between">
               <span className={`text-[10px] font-black uppercase tracking-widest px-1 ${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>

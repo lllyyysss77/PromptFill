@@ -40,7 +40,7 @@
 /**
  * 模板系统版本号，每次更新 templates.js 或 banks.js 时请更新此版本号
  */
-export const SYSTEM_DATA_VERSION = "1.0.0";
+export const SYSTEM_DATA_VERSION = "1.0.1";
 
 /**
  * 分享功能正式环境域名（扫码导入需使用公网可访问地址）
@@ -2098,18 +2098,29 @@ The sequence culminates as the jet bursts above the waterfall, revealing a breat
  * 5. tags 可以从 TEMPLATE_TAGS 中选择
  */
 export const TEMPLATE_IMPORTED_MMQC6OK1 = {
-  cn: `一张照片，展示极度拥挤的{{location}}车厢内部，人们站着排成一排的全身照。一只巨大的、可爱的{{character_type}}，正看着镜头，乘坐着穿过{{city_name}}城市交通的地铁。`,
-  en: `A photo showing an extremely crowded {{location}} carriage interior with people standing in a row for a full-body shot. A huge, cute {{character_type}} is looking at the camera, riding the subway through {{city_name}} city traffic.`
+  cn: `一张照片，展示极度拥挤的{{location}}车厢内部，人们站着排成一排的全身照。一只巨大的、可爱的{{subway_costume}}，穿着{{costume_material}}材质的服装，正看着镜头，乘坐着穿过{{city_name}}城市交通的地铁。头上戴着{{accessory}}。`,
+  en: `A photo showing an extremely crowded {{location}} carriage interior with people standing in a row for a full-body shot. A huge, cute {{subway_costume}} wearing {{costume_material}} material costume is looking at the camera, riding the subway through {{city_name}} city traffic. Wearing {{accessory}} on head.`
 };
 
 export const TEMPLATE_IMPORTED_MMRP53JL = {
-  cn: `创建一张3D {{art_style}} 风格的插画。画面中是一个全身 {{character_type}} 从 Instagram 帖子的边框中探出头来，仿佛她是一个社交媒体角色。背景是 {{background_color}}，采用神经线条画风格。女孩快乐、甜美，大眼睛，带着微笑。边框中显示用户名：{{profile_name}}。添加 Instagram 风格的“点赞”、“评论”和“发送”图标。一只手托着边框。3:4 格式`,
-  en: `Create a 3D {{art_style}} illustration. Picture a full-length {{character_type}} peeking out of the frame of an Instagram post, as if she were a social media character. The background is {{background_color}} in the style of neurography. The girl is joyful, sweet, with wide eyes and a smile. The profile name is indicated in the frame: {{profile_name}}. Add Instagram-style "like", "comment" and "send" icons. A hand holds the frame. 3:4 format`
+  cn: `创建一张3D {{art_style}} 风格的插画。画面中是一个全身 {{character_type}} 从 Instagram 帖子的边框中探出头来，仿佛她是一个社交媒体角色。背景是 {{social_bg_color}}，采用神经线条画风格。女孩快乐、甜美，大眼睛，带着微笑。边框中显示用户名：{{social_profile_name}}。添加 Instagram 风格的"点赞"、"评论"和"发送"图标。一只手托着边框。3:4 格式`,
+  en: `Create a 3D {{art_style}} illustration. Picture a full-length {{character_type}} peeking out of the frame of an Instagram post, as if she were a social media character. The background is {{social_bg_color}} in the style of neurography. The girl is joyful, sweet, with wide eyes and a smile. The profile name is indicated in the frame: {{social_profile_name}}. Add Instagram-style "like", "comment" and "send" icons. A hand holds the frame. 3:4 format`
 };
 
 export const TEMPLATE_IMPORTED_MMRQ1ZN6 = {
   cn: `一幅电影感插画，采用清晰的 {{art_style}} 风格。一位身材高挑的年轻女子，长发飘逸，正骑着 {{design_item}} 沿着沿海山顶狭窄的混凝土小径笔直冲下。她修长、双腿修长的轮廓增强了优雅的垂直构图。她的身体姿态自然地与道路的坡度对齐，双肩水平且平行于小径，臀部居中，没有过度扭转。她面向前方，朝运动方向看去。一只脚稳稳地踩在滑板的前部，后脚自然地靠近尾部，双脚与滑板对齐。她的双腿笔直放松，膝盖没有弯曲。滑板笔直且完全平行于下坡小径，没有侧倾，表现出受控且自信的运动。她穿着轻盈的 {{clothing}}，在海风中向后飘动。布料轻轻拖在身后，突显她高挑优雅的身姿。由于向前运动，她的长发直接向后飘动。没有背包。相机位于她正后方，角度略高，以小径为中心。地平线笔直稳定，没有倾斜或荷兰角。透视强调深度和陡峭的下坡。山顶小径被郁郁葱葱的绿草环绕，向下延伸至远处全景般的绿松石海岸。一座海滨小镇沿着弯曲的海岸线分布。巨大的积云塔耸立在蔚蓝的天空中，阳光照亮海面。垂直构图，9:16 宽高比，超高分辨率，动态而稳定的构图，优雅的比例，动漫电影剧照，杰作品质。`,
   en: `A cinematic, hand-painted anime illustration in a clear {{art_style}} style. A tall young woman with long flowing brown hair is riding a {{design_item}} straight downhill along a narrow concrete path on top of a coastal hill. She has a slender, long-legged silhouette that enhances the elegant vertical composition. Her body posture is aligned naturally with the slope of the road shoulders level and parallel to the path, hips centered, no excessive twisting. She is facing forward in the direction of motion. One foot is placed firmly at the front of the skateboard, the back foot positioned naturally near the tail, both feet aligned with the board. Her legs are straight and relaxed, not bent at the knees. The skateboard is straight and perfectly parallel to the downhill path, not tilted sideways, expressing controlled and confident movement. She wears a lightweight {{clothing}} flowing backward in the ocean wind. The fabric gently trails behind her, emphasizing her tall and graceful figure. Her long hair streams directly behind her due to forward motion. No backpack. The camera is positioned directly behind her at a slightly elevated angle, centered on the path. The horizon line is straight and stable no tilted or dutch angle. The perspective emphasizes depth and the steep downhill slope. The hilltop path is surrounded by lush green grass, descending toward a panoramic turquoise coastline far below. A seaside town spreads along the curved shore. Massive cumulus clouds tower in a rich blue sky, sunlight illuminating the ocean surface. Vertical composition, 9:16 aspect ratio, ultra high resolution, dynamic yet stable composition, elegant proportions, anime movie still, masterpiece quality.`
+};
+
+export const TEMPLATE_IMPORTED_MMSZANDO = {
+  cn: `{{drink_product}}的专业照片。在{{drink_background}}上。{{drink_product}}{{drink_action}}。橙汁在罐周围旋转。罐体上的高光和橙子在背景上的阴影。{{drink_camera_angle}}，使用DSLR 35mm 2.8拍摄`,
+  en: `Professional photo of a {{drink_product}}. On a {{drink_background}}. The {{drink_product}} is {{drink_action}}. The orange juice is swirling around the can. Highlights on the can and oranges shadow on the backdrop. {{drink_camera_angle}} taken with a DSLR 35mm 2.8`
+};
+
+// 护肤品奇幻广告模板
+export const TEMPLATE_SKINCARE_FANTASY_AD = {
+  cn: `超现实奢华护肤品广告照片，倾斜的巨大{{skincare_product}}漂浮在柔软白云上方，瓶身为{{skincare_color}}的玻璃材质，瓶内产品呈新鲜凝结水珠状，瓶身在空中微微倾斜。一位时尚年轻女性面容平静自然，{{fantasy_character_pose}}，身穿{{fantasy_dress_style}}，裙摆随风轻柔飘动。{{fantasy_floating_elements}}在空中漂浮。梦幻奇妙的护肤品广告美学，{{fantasy_sky_background}}背景，玻璃瓶身呈现光泽反射，超写实商业产品摄影，柔和电影级阳光带来清晰高光，使用佳能EOS R5拍摄，50mm f/1.8镜头，{{pastel_color_palette}}调色板`,
+  en: `A surreal luxury skincare advertising photo of a tilted giant {{skincare_product}} floating above soft white clouds, bottle is {{skincare_color}} glass material with fresh condensation droplets inside, the bottle slightly inclined in the air. A fashionable young woman with a calm natural facial expression {{fantasy_character_pose}}, wearing a {{fantasy_dress_style}} that moves gently in the breeze. {{fantasy_floating_elements}} floating around in the sky. Dreamy whimsical skincare campaign aesthetic, {{fantasy_sky_background}} background, glossy reflections on the glass bottle, ultra realistic commercial product photography, soft cinematic sunlight with crisp highlights, shot with a Canon EOS R5, 50mm f/1.8 lens, {{pastel_color_palette}} color palette`
 };
 
 export const INITIAL_TEMPLATES_CONFIG = [
@@ -3011,16 +3022,20 @@ export const INITIAL_TEMPLATES_CONFIG = [
 ,
   {
     id: "tpl_imported_mmqc6ok1_地铁玩偶装扮",
-    name: { cn: "地铁玩偶装扮", en: "Subway Rabbit Costume" },
+    name: { cn: "地铁玩偶装扮", en: "Subway Costume" },
     content: TEMPLATE_IMPORTED_MMQC6OK1,
     imageUrl: "https://s3.bmp.ovh/2026/03/14/8OzmfHGv.jpg",
     author: "@tanshilong",
     selections: {
-      character_type: {
+      location: {
+        cn: "日本地铁",
+        en: "Japanese subway"
+      },
+      subway_costume: {
         cn: "粉色羊毛兔子装扮",
         en: "Pink wool rabbit costume"
       },
-      material: {
+      costume_material: {
         cn: "羊毛",
         en: "wool"
       },
@@ -3032,17 +3047,16 @@ export const INITIAL_TEMPLATES_CONFIG = [
         cn: "东京",
         en: "Tokyo"
       },
-      "character_type-0": {
+      "subway_costume-0": {
         cn: "黄色小鸡装扮",
-        en: "yellow chick costume"
+        en: "Yellow chick costume"
       },
-      "city_name-0": "名古屋站前",
-      location: {
-        cn: "日本地铁",
-        en: "Japanese subway"
+      "city_name-0": {
+        cn: "名古屋站前",
+        en: "Nagoya Station"
       }
     },
-    tags: ["人物","摄影","现代","游戏"],
+    tags: ["人物","摄影","创意"],
     language: ["cn","en"],
     bestModel: "Nano Banana Pro",
     baseImage: "no_base_image"
@@ -3050,7 +3064,7 @@ export const INITIAL_TEMPLATES_CONFIG = [
 ,
   {
     id: "tpl_imported_mmrp53jl_社交卡片",
-    name: "社交卡片",
+    name: { cn: "社交卡片", en: "Social Card" },
     content: TEMPLATE_IMPORTED_MMRP53JL,
     imageUrl: "https://s3.bmp.ovh/2026/03/15/Yc01hJ3Q.jpg",
     author: "@",
@@ -3063,11 +3077,11 @@ export const INITIAL_TEMPLATES_CONFIG = [
         cn: "女性",
         en: "woman"
       },
-      background_color: {
+      social_bg_color: {
         cn: "粉色和勃艮第红",
         en: "pink and burgundy"
       },
-      profile_name: {
+      social_profile_name: {
         cn: "@RealMe+",
         en: "@RealMe+"
       },
@@ -3075,10 +3089,16 @@ export const INITIAL_TEMPLATES_CONFIG = [
         cn: "男员工",
         en: "male employee"
       },
-      "background_color-0": "mint green and coral",
-      "profile_name-0": "@Prompt Fill"
+      "social_bg_color-0": {
+        cn: "薄荷绿和珊瑚色",
+        en: "mint green and coral"
+      },
+      "social_profile_name-0": {
+        cn: "@PromptFill",
+        en: "@PromptFill"
+      }
     },
-    tags: [],
+    tags: ["创意","卡通"],
     language: ["cn","en"],
     bestModel: "Nano Banana Pro",
     baseImage: "optional_base_image"
@@ -3086,7 +3106,7 @@ export const INITIAL_TEMPLATES_CONFIG = [
 ,
   {
     id: "tpl_imported_mmrq1zn6_滑板女孩",
-    name: "滑板女孩",
+    name: { cn: "滑板女孩", en: "Skateboard Girl" },
     content: TEMPLATE_IMPORTED_MMRQ1ZN6,
     imageUrl: "https://s3.bmp.ovh/2026/03/15/NeHsU0GX.jpg",
     author: "PromptFill User",
@@ -3103,7 +3123,10 @@ export const INITIAL_TEMPLATES_CONFIG = [
         cn: "海沫绿连衣裙",
         en: "seafoam green dress"
       },
-      "design_item-0": "滑板",
+      "design_item-0": {
+        cn: "滑板",
+        en: "skateboard"
+      },
       "clothing-0": {
         cn: "海沫绿连衣裙",
         en: "seafoam green dress"
@@ -3113,9 +3136,80 @@ export const INITIAL_TEMPLATES_CONFIG = [
         en: "Makoto Shinkai × Studio Ghibli"
       }
     },
-    tags: [],
+    tags: ["人物","摄影"],
     language: ["cn","en"],
     bestModel: "Nano Banana Pro",
     baseImage: "optional_base_image"
+  }
+,
+  {
+    id: "tpl_imported_mmszando_芬达饮料罐",
+    name: { cn: "芬达饮料罐", en: "Fanta Soda Can" },
+    content: TEMPLATE_IMPORTED_MMSZANDO,
+    imageUrl: "https://s3.bmp.ovh/2026/03/16/gOnlAk9I.jpg",
+    author: "@tanshilong",
+    selections: {
+      drink_product: {
+        cn: "芬达软饮料罐",
+        en: "Fanta softdrink can"
+      },
+      drink_background: {
+        cn: "橙色背景",
+        en: "orange background"
+      },
+      drink_action: {
+        cn: "爆炸，橙子从罐中涌出",
+        en: "exploding with oranges bursting from the can"
+      },
+      drink_camera_angle: {
+        cn: "高角度俯拍橙汁旋转形成的圆弧",
+        en: "high angle overhead shot capturing the swirling arc of orange juice"
+      }
+    },
+    tags: ["产品","摄影"],
+    language: ["cn","en"],
+    bestModel: "Nano Banana Pro",
+    baseImage: "no_base_image"
+  },
+  {
+    id: "tpl_skincare_fantasy_ad",
+    name: { cn: "护肤品奇幻广告", en: "Skincare Fantasy Ad" },
+    content: TEMPLATE_SKINCARE_FANTASY_AD,
+    imageUrl: "https://s3.bmp.ovh/2026/03/17/IBad9qh6.jpg",
+    author: "@tanshilong",
+    selections: {
+      skincare_product: {
+        cn: "精华滴管瓶",
+        en: "serum dropper bottle"
+      },
+      skincare_color: {
+        cn: "粉桃色",
+        en: "pink-peach colored"
+      },
+      fantasy_character_pose: {
+        cn: "坐在瓶盖上",
+        en: "sitting on the bottle cap"
+      },
+      fantasy_dress_style: {
+        cn: "优雅飘逸的连衣裙",
+        en: "elegant flowing dress"
+      },
+      fantasy_floating_elements: {
+        cn: "成熟桃子和桃子切片",
+        en: "ripe peaches and peach slices"
+      },
+      fantasy_sky_background: {
+        cn: "明亮清澈的蓝天",
+        en: "bright clear blue sky"
+      },
+      pastel_color_palette: {
+        cn: "粉桃色和天蓝色",
+        en: "pastel peach and sky blue"
+      }
+    },
+    tags: ["产品","创意","奇幻"],
+    language: ["cn","en"],
+    bestModel: "Nano Banana Pro",
+    baseImage: "no_base_image"
   }
 ];

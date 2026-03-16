@@ -113,20 +113,6 @@ export const TemplatePreview = React.memo(({
     ? 'text-orange-600/90' 
     : 'text-indigo-600/90 dark:text-indigo-400/90';
 
-  // 统一的底层容器样式
-  const unifiedStyle = isDarkMode ? {
-    borderRadius: '24px',
-    border: '1px solid transparent',
-    backgroundImage: 'linear-gradient(180deg, #3B3B3B 0%, #242120 100%), linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%)',
-    backgroundOrigin: 'border-box',
-    backgroundClip: 'padding-box, border-box',
-  } : {
-    borderRadius: '24px',
-    border: '1px solid transparent',
-    backgroundImage: 'linear-gradient(180deg, #FAF5F1 0%, #F6EBE6 100%), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)',
-    backgroundOrigin: 'border-box',
-    backgroundClip: 'padding-box, border-box',
-  };
 
   const allImages = React.useMemo(() => {
     if (activeTemplate?.imageUrls && Array.isArray(activeTemplate.imageUrls) && activeTemplate.imageUrls.length > 0) {

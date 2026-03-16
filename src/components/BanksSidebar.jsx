@@ -685,7 +685,7 @@ export const BanksSidebar = React.memo(({
             ${!isMobile && mobileTab !== 'editor' && mobileTab !== 'banks' ? 'hidden md:flex' : ''}
         `}
       >
-        <div className={`flex flex-col w-full h-full backdrop-blur-sm rounded-3xl md:rounded-2xl ${isMobile ? (isDarkMode ? 'bg-[#242120]/95' : 'bg-white/95') : (isDarkMode ? 'bg-black/20' : 'bg-white/30')}`}>
+        <div className={`flex flex-col w-full h-full rounded-3xl md:rounded-2xl ${isMobile ? (isDarkMode ? 'bg-[#242120]/95' : 'bg-white/95') : (isDarkMode ? 'bg-black/20' : 'bg-transparent')}`}>
           <div 
               className="hidden md:flex absolute -left-2 top-0 bottom-0 w-4 cursor-col-resize z-40 group items-center justify-center"
               onMouseDown={startResizing}

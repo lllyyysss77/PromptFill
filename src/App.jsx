@@ -53,7 +53,7 @@ const App = () => {
   const navigate = useNavigate();
 
   // 当前应用代码版本 (必须与 package.json 和 version.json 一致)
-  const APP_VERSION = "1.0.0";
+  const APP_VERSION = "1.0.1";
 
   // 临时功能：瀑布流样式管理
   const [masonryStyleKey, setMasonryStyleKey] = useState('poster');
@@ -3240,10 +3240,11 @@ The background is {{background_color::pink and burgundy}}. The profile name is {
     backgroundClip: 'padding-box, border-box',
   } : {
     borderRadius: '24px',
-    border: '1px solid transparent',
-    backgroundImage: 'linear-gradient(180deg, #FAF5F1 0%, #F6EBE6 100%), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)',
-    backgroundOrigin: 'border-box',
-    backgroundClip: 'padding-box, border-box',
+    border: '1px solid rgba(255, 255, 255, 0.50)',
+    background: 'linear-gradient(180deg, rgba(255, 250, 245, 0.58) 0%, rgba(248, 232, 215, 0.50) 100%)',
+    backdropFilter: 'blur(32px)',
+    WebkitBackdropFilter: 'blur(32px)',
+    boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.55), 0 2px 24px rgba(180, 120, 80, 0.08)',
   };
 
   if (!isTemplatesLoaded || !isBanksLoaded || !isCategoriesLoaded || !isDefaultsLoaded) {

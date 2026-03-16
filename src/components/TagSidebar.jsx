@@ -48,14 +48,19 @@ export const TagSidebar = ({
       {/* 内层与 TemplatesSidebar/BanksSidebar 一致：圆角+背景，标题区从内层顶开始算 pt-4 */}
       <div
         className="flex flex-col w-full h-full overflow-hidden"
-        style={{
+        style={isDarkMode ? {
           borderRadius: '24px',
           border: '1px solid transparent',
-          backgroundImage: isDarkMode
-            ? 'linear-gradient(180deg, #3B3B3B 0%, #242120 100%), linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%)'
-            : 'linear-gradient(180deg, #FAF5F1 0%, #F6EBE6 100%), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)',
+          backgroundImage: 'linear-gradient(180deg, #3B3B3B 0%, #242120 100%), linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%)',
           backgroundOrigin: 'border-box',
           backgroundClip: 'padding-box, border-box',
+        } : {
+          borderRadius: '24px',
+          border: '1px solid rgba(255, 255, 255, 0.50)',
+          background: 'linear-gradient(180deg, rgba(255, 250, 245, 0.58) 0%, rgba(248, 232, 215, 0.50) 100%)',
+          backdropFilter: 'blur(32px)',
+          WebkitBackdropFilter: 'blur(32px)',
+          boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.55), 0 2px 24px rgba(180, 120, 80, 0.08)',
         }}
       >
         {/* 顶部标题区：24px + 安全区，与其他三块面板一致 */}

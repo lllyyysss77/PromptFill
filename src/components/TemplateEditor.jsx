@@ -223,18 +223,19 @@ export const TemplateEditor = React.memo(({
     backgroundClip: 'padding-box, border-box',
   } : {
     borderRadius: '24px',
-    border: '1px solid transparent',
-    backgroundImage: 'linear-gradient(180deg, #FAF5F1 0%, #F6EBE6 100%), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)',
-    backgroundOrigin: 'border-box',
-    backgroundClip: 'padding-box, border-box',
+    border: '1px solid rgba(255, 255, 255, 0.50)',
+    background: 'linear-gradient(180deg, rgba(255, 250, 245, 0.58) 0%, rgba(248, 232, 215, 0.50) 100%)',
+    backdropFilter: 'blur(32px)',
+    WebkitBackdropFilter: 'blur(32px)',
+    boxShadow: 'inset 0 1px 0 rgba(255, 255, 255, 0.55), 0 2px 24px rgba(180, 120, 80, 0.08)',
   }) : {};
 
   const innerBoxStyle = !isMobileDevice ? {
     background: isDarkMode 
       ? 'linear-gradient(#252525, #252525) padding-box, linear-gradient(0deg, #646464 0%, rgba(0, 0, 0, 0) 100%) border-box'
-      : 'linear-gradient(#E8E3DD, #E8E3DD) padding-box, linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%) border-box',
-    boxShadow: 'inset 0px 2px 4px 0px rgba(0, 0, 0, 0.2)',
-    border: isDarkMode ? '1px solid rgba(255, 255, 255, 0.05)' : '1px solid rgba(0, 0, 0, 0.05)',
+      : 'linear-gradient(rgba(240, 228, 215, 0.55), rgba(240, 228, 215, 0.55)) padding-box, linear-gradient(0deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 100%) border-box',
+    boxShadow: 'inset 0px 2px 4px 0px rgba(0, 0, 0, 0.12)',
+    border: isDarkMode ? '1px solid rgba(255, 255, 255, 0.05)' : '1px solid rgba(0, 0, 0, 0.04)',
   } : {};
 
   // 模板支持的语言
@@ -326,7 +327,7 @@ export const TemplateEditor = React.memo(({
     >
       <div 
         style={containerStyle}
-        className={`flex flex-col w-full h-full ${!isMobileDevice ? 'backdrop-blur-sm' : ''}`}
+        className="flex flex-col w-full h-full"
       >
 
         {/* ===== 顶部工具栏 ===== */}
@@ -451,7 +452,7 @@ export const TemplateEditor = React.memo(({
               /* ==================== MOBILE: 四段手风琴 ==================== */
               <div className="flex-1 relative overflow-y-auto overflow-x-hidden flex flex-col custom-scrollbar">
                 {/* 编辑工具栏 */}
-                <div className={`backdrop-blur-sm ${isDarkMode ? 'bg-white/5' : 'bg-white/30'}`}>
+                <div className={`backdrop-blur-sm ${isDarkMode ? 'bg-white/5' : 'bg-[#F0E4D8]/50'}`}>
                   <EditorToolbar
                     onInsertClick={() => setIsInsertModalOpen(true)}
                     onSmartSplitClick={onSmartSplitClick}
@@ -508,7 +509,7 @@ export const TemplateEditor = React.memo(({
                     </span>
                   </button>
                   {mobileAccordion === 'info' && (
-                    <div className={`px-4 pb-4 pt-4 flex flex-col gap-2 ${isDarkMode ? 'bg-white/[0.02]' : 'bg-gray-50/50'}`}>
+                    <div className={`px-4 pb-4 pt-4 flex flex-col gap-2 ${isDarkMode ? 'bg-white/[0.02]' : 'bg-[#F5EAE0]/40'}`}>
                       <div className="flex flex-col gap-0.5">
                         <label className={`text-[10px] font-black uppercase tracking-widest ${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>{language === 'cn' ? '标题' : 'Title'}</label>
                         <input type="text" value={tempTemplateName} onChange={(e) => setTempTemplateName(e.target.value)} onBlur={saveTemplateName}
@@ -590,7 +591,7 @@ export const TemplateEditor = React.memo(({
                     </span>
                   </button>
                   {mobileAccordion === 'preview' && (
-                    <div className={`px-4 pb-4 pt-4 ${isDarkMode ? 'bg-white/[0.02]' : 'bg-gray-50/50'}`}>
+                    <div className={`px-4 pb-4 pt-4 ${isDarkMode ? 'bg-white/[0.02]' : 'bg-[#F5EAE0]/40'}`}>
                       <HScrollArea isDarkMode={isDarkMode}>
                         {activeTemplate.type === 'video' ? (
                           <>
@@ -706,7 +707,7 @@ export const TemplateEditor = React.memo(({
                     </span>
                   </button>
                   {mobileAccordion === 'source' && (
-                    <div className={`px-4 pb-4 pt-4 ${isDarkMode ? 'bg-white/[0.02]' : 'bg-gray-50/50'}`}>
+                    <div className={`px-4 pb-4 pt-4 ${isDarkMode ? 'bg-white/[0.02]' : 'bg-[#F5EAE0]/40'}`}>
                       {renderSourceAssets()}
                     </div>
                   )}
@@ -757,7 +758,7 @@ export const TemplateEditor = React.memo(({
               /* ==================== DESKTOP: 四段手风琴 ==================== */
               <div className="flex-1 relative overflow-y-auto overflow-x-hidden flex flex-col custom-scrollbar">
                 {/* 编辑工具栏 */}
-                <div className={`backdrop-blur-sm ${isDarkMode ? 'bg-white/5' : 'bg-white/30'}`}>
+                <div className={`backdrop-blur-sm ${isDarkMode ? 'bg-white/5' : 'bg-[#F0E4D8]/50'}`}>
                   <EditorToolbar
                     onInsertClick={() => setIsInsertModalOpen(true)}
                     onSmartSplitClick={onSmartSplitClick}
@@ -800,7 +801,7 @@ export const TemplateEditor = React.memo(({
                     </span>
                   </button>
                   {desktopAccordion.has('info') && (
-                    <div className={`px-6 pb-4 pt-4 ${isDarkMode ? 'bg-white/[0.02]' : 'bg-gray-50/50'}`}>
+                    <div className={`px-6 pb-4 pt-4 ${isDarkMode ? 'bg-white/[0.02]' : 'bg-[#F5EAE0]/40'}`}>
                       <div className="grid grid-cols-4 gap-3" ref={selectRef}>
                         <div className="flex flex-col gap-0.5">
                           <label className={`text-[10px] font-black uppercase tracking-widest ${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>{language === 'cn' ? '标题' : 'Title'}</label>
@@ -880,7 +881,7 @@ export const TemplateEditor = React.memo(({
                     </span>
                   </button>
                   {desktopAccordion.has('preview') && (
-                    <div className={`px-6 pb-4 pt-4 ${isDarkMode ? 'bg-white/[0.02]' : 'bg-gray-50/50'}`}>
+                    <div className={`px-6 pb-4 pt-4 ${isDarkMode ? 'bg-white/[0.02]' : 'bg-[#F5EAE0]/40'}`}>
                       <HScrollArea isDarkMode={isDarkMode}>
                         {activeTemplate.type === 'video' ? (
                           <>
@@ -994,7 +995,7 @@ export const TemplateEditor = React.memo(({
                     </span>
                   </button>
                   {desktopAccordion.has('source') && (
-                    <div className={`px-6 pb-4 pt-4 ${isDarkMode ? 'bg-white/[0.02]' : 'bg-gray-50/50'}`}>
+                    <div className={`px-6 pb-4 pt-4 ${isDarkMode ? 'bg-white/[0.02]' : 'bg-[#F5EAE0]/40'}`}>
                       {renderSourceAssets()}
                     </div>
                   )}

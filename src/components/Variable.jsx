@@ -42,6 +42,7 @@ export const Variable = ({
   const [alignRight, setAlignRight] = useState(false);
   const [alignTop, setAlignTop] = useState(false);
   const [maxPopoverWidth, setMaxPopoverWidth] = useState('95vw');
+  const [popoverPos, setPopoverPos] = useState(null);
   
   // 核心优化：改用即时检测，确保渲染初期定位逻辑正确
   // 增加阈值到 1024px，确保在平板和窄屏下也能触发居中模态框模式
@@ -85,27 +86,29 @@ export const Variable = ({
       const popoverWidth = 320; 
       const estimatedPopoverHeight = 480; 
       
-      // 1. 水平定位：
+      // 1. 水平定位
       const wouldOverflowRight = rect.left + popoverWidth > vWidth - 20;
       const wouldOverflowLeftIfRightAligned = rect.right - popoverWidth < 20;
       const isInRightHalf = rect.left > vWidth / 2;
-      
-      if (wouldOverflowRight && !wouldOverflowLeftIfRightAligned) {
-        setAlignRight(true);
-      } else if (isInRightHalf && !wouldOverflowLeftIfRightAligned) {
-        setAlignRight(true);
-      } else {
-        setAlignRight(false);
-      }
+      const shouldAlignRight = (wouldOverflowRight || isInRightHalf) && !wouldOverflowLeftIfRightAligned;
+      setAlignRight(shouldAlignRight);
 
-      // 2. 垂直定位：
+      // 2. 垂直定位
       const spaceBelow = vHeight - rect.bottom;
       const spaceAbove = rect.top;
-      
-      if (spaceBelow < estimatedPopoverHeight && spaceAbove > spaceBelow) {
-        setAlignTop(true);
+      const shouldAlignTop = spaceBelow < estimatedPopoverHeight && spaceAbove > spaceBelow;
+      setAlignTop(shouldAlignTop);
+
+      // 3. 计算 fixed 定位的像素坐标
+      // 向上展开时用 bottom（距视口底部距离），确保弹窗底边贴近触发词条顶部而不遮挡
+      const left = shouldAlignRight ? rect.right - popoverWidth : rect.left;
+      if (shouldAlignTop) {
+        const bottom = vHeight - rect.top + 8;
+        const maxH = Math.min(rect.top - 16, 520); // 上方可用空间
+        setPopoverPos({ bottom, top: 'auto', left, maxHeight: maxH });
       } else {
-        setAlignTop(false);
+        const maxH = Math.min(vHeight - rect.bottom - 16, 520); // 下方可用空间
+        setPopoverPos({ top: rect.bottom + 8, bottom: 'auto', left, maxHeight: maxH });
       }
 
       setMaxPopoverWidth(`${Math.min(vWidth - 32, 320)}px`);
@@ -115,13 +118,18 @@ export const Variable = ({
       setIsAdding(false);
       setNewOptionPrimary("");
       setNewOptionSecondary("");
-      setVisibleAiTermsCount(aiTerms.length); 
+      setVisibleAiTermsCount(aiTerms.length);
+      setPopoverPos(null);
     } else {
       updatePosition();
-      // 仅在桌面端监听 resize，移动端固定居中无需重新计算
+      // 仅在桌面端监听 resize 和 scroll，移动端固定居中无需重新计算
       if (!isMobileDevice) {
         window.addEventListener('resize', updatePosition);
-        return () => window.removeEventListener('resize', updatePosition);
+        window.addEventListener('scroll', updatePosition, true);
+        return () => {
+          window.removeEventListener('resize', updatePosition);
+          window.removeEventListener('scroll', updatePosition, true);
+        };
       }
     }
   }, [isOpen, aiTerms.length, isMobileDevice]);
@@ -585,20 +593,21 @@ export const Variable = ({
               </div>
             </div>,
             document.body
-          ) : (
-            /* 桌面端模式：保持原位 absolute 弹出 */
+          ) : createPortal(
+            /* 桌面端模式：portal 到 body，fixed 定位，完全脱离父级 overflow 约束 */
             <div
               ref={popoverRef}
-              className={`
-                absolute z-[600] rounded-[28px] shadow-2xl overflow-hidden flex flex-col text-left 
-                animate-in fade-in zoom-in-95 duration-200 
-                ${alignRight ? 'right-0' : 'left-0'} 
-                ${alignTop ? 'bottom-full mb-3 origin-bottom' : 'top-full mt-3 origin-top'}
-                ${alignRight ? (alignTop ? 'origin-bottom-right' : 'origin-top-right') : (alignTop ? 'origin-bottom-left' : 'origin-top-left')}
-              `}
+              className="fixed z-[2000] rounded-[28px] shadow-2xl overflow-hidden flex flex-col text-left"
               style={{
+                top: popoverPos?.top ?? 'auto',
+                bottom: popoverPos?.bottom ?? 'auto',
+                left: popoverPos?.left ?? 0,
+                visibility: popoverPos ? 'visible' : 'hidden',
+                transformOrigin: `${alignRight ? 'right' : 'left'} ${alignTop ? 'bottom' : 'top'}`,
+                animation: popoverPos ? 'popoverIn 0.18s ease-out forwards' : 'none',
                 width: '320px',
                 maxWidth: maxPopoverWidth,
+                maxHeight: popoverPos?.maxHeight ? `${popoverPos.maxHeight}px` : '80vh',
                 backdropFilter: 'blur(40px) saturate(180%)',
                 backgroundColor: isDarkMode ? 'rgba(36, 33, 32, 0.98)' : 'rgba(255, 255, 255, 0.95)',
                 border: isDarkMode ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid rgba(0, 0, 0, 0.05)',
@@ -608,7 +617,8 @@ export const Variable = ({
               }}
             >
               {popoverContent}
-            </div>
+            </div>,
+            document.body
           )}
         </>
       )}

@@ -73,7 +73,7 @@ export const TemplatesSidebar = React.memo(({
         ${!isMobile && mobileTab !== 'editor' && mobileTab !== 'banks' ? 'hidden md:flex' : ''}
       `}
       >
-        <div className={`flex flex-col w-full h-full ${isMobile ? (isDarkMode ? 'bg-[#242120]/95' : 'bg-white/95') : 'bg-transparent'} backdrop-blur-sm rounded-3xl md:rounded-2xl`}>
+        <div className={`flex flex-col w-full h-full ${isMobile ? (isDarkMode ? 'bg-[#242120]/95' : 'bg-white/95') : 'bg-transparent'} rounded-3xl md:rounded-2xl`}>
           {/* --- Sidebar Header with Tools --- */}
       <div className="px-6 pb-4 flex-shrink-0" style={{ paddingTop: 'calc(1.5rem + env(safe-area-inset-top, 0px))' }}>
          <div className="flex items-center justify-between mb-[14px] min-h-10">

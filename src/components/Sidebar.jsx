@@ -64,10 +64,6 @@ export const Sidebar = ({
     borderRadius: '16px',
     border: '1px solid transparent',
     background: 'transparent',
-    // 原渐变样式 (暂时禁用) - 使用渐变背景 + 渐变描边技巧 (解决 border-radius 与 border-image 冲突)
-    // backgroundImage: 'linear-gradient(180deg, #FAF5F1 0%, #F6EBE6 100%), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)',
-    // backgroundOrigin: 'border-box',
-    // backgroundClip: 'padding-box, border-box',
   };
 
   return (
