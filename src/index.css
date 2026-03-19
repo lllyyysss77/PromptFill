@@ -661,6 +661,24 @@ body {
   background-size: 200% 100%;
 }
 
+/* ContentEditable pill 选中与交互效果 */
+[contenteditable] [data-pill-var]::selection,
+[contenteditable] [data-pill-var] *::selection {
+  background: transparent;
+}
+
+[contenteditable] [data-pill-var]:hover {
+  filter: brightness(0.95);
+}
+
+.dark [contenteditable] [data-pill-var]:hover {
+  filter: brightness(1.15);
+}
+
+[contenteditable]:focus {
+  outline: none;
+}
+
 /* Variable pills loading effect - 更加轻量 */
 .text-processing-mask [data-export-pill="true"] {
   filter: grayscale(1) opacity(0.7) !important;
