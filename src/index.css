@@ -8,6 +8,21 @@ body {
   min-height: 100vh;
 }
 
+@keyframes autocompleteIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes autocompleteInUp {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-autocomplete-in {
+  animation: autocompleteIn 0.12s ease-out;
+}
+.animate-autocomplete-in-up {
+  animation: autocompleteInUp 0.12s ease-out;
+}
+
 @keyframes popoverIn {
   from {
     opacity: 0;
@@ -659,6 +674,24 @@ body {
     #52525b 100%
   );
   background-size: 200% 100%;
+}
+
+/* ContentEditable pill 选中与交互效果 */
+[contenteditable] [data-pill-var]::selection,
+[contenteditable] [data-pill-var] *::selection {
+  background: transparent;
+}
+
+[contenteditable] [data-pill-var]:hover {
+  filter: brightness(0.95);
+}
+
+.dark [contenteditable] [data-pill-var]:hover {
+  filter: brightness(1.15);
+}
+
+[contenteditable]:focus {
+  outline: none;
 }
 
 /* Variable pills loading effect - 更加轻量 */

@@ -732,6 +732,8 @@ export const TemplateEditor = React.memo(({
                           language={language}
                           t={t}
                           onInteraction={() => {}}
+                          onUndo={handleUndo}
+                          onRedo={handleRedo}
                         />
                       </div>
                     </div>
@@ -1014,6 +1016,8 @@ export const TemplateEditor = React.memo(({
                               setDesktopAccordion(new Set(['content']));
                             }
                           }}
+                          onUndo={handleUndo}
+                          onRedo={handleRedo}
                         />
                       </div>
                     </div>
