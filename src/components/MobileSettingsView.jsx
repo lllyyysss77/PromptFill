@@ -55,6 +55,17 @@ export const MobileSettingsView = ({
   
   // 完善后的更新日志 (同步桌面端内容)
   const updateLogs = language === 'cn' ? [
+    {
+      version: 'V1.1.3',
+      date: '2026-04-21',
+      title: '模版库大扩充 · 平台支持更新',
+      content: [
+        '新增 10 套官方模版：博物馆图鉴、九宫格设计师、四格广告、新中式城市海报、古诗课本页、App 图标集、双 IP 明信片、国潮集换卡、复古拟物图标、生活类 App UI',
+        '复制弹窗新增 ChatGPT (chatgpt.com) 官方平台入口',
+        '最佳模型新增 GPT-image-2、Midjourney niji 7、v8.1、Nano Banana 2',
+        '修复窄侧栏下编辑词条保存报错',
+      ]
+    },
     { 
       version: 'V1.1.2', 
       date: '2026-03-28', 
@@ -233,6 +244,17 @@ export const MobileSettingsView = ({
       ]
     }
   ] : [
+    {
+      version: 'V1.1.3',
+      date: '2026-04-21',
+      title: 'Template Library Expansion · Platform Updates',
+      content: [
+        'Added 10 official templates: Museum Infographic, Nine-Grid Designers, Four-Panel Ads, Neo-Chinese City Poster, Textbook Poem Page, App Iconfont, Dual-IP Postcard, Gacha Card Set, Retro Icons, Lifestyle App UI',
+        'Copy modal: ChatGPT (chatgpt.com) added as official platform',
+        'New model options: GPT-image-2, Midjourney niji 7, v8.1, Nano Banana 2',
+        'Fix: save edited bank option in narrow sidebar layout',
+      ]
+    },
     { 
       version: 'V1.1.2', 
       date: '2026-03-28', 

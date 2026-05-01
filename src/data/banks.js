@@ -2793,6 +2793,94 @@ export const INITIAL_BANKS = {
       { cn: "欧阳修", en: "Ouyang Xiu" },
       { cn: "陶渊明", en: "Tao Yuanming" }
     ]
+  },
+
+  heritage_building: {
+    label: { cn: "中式地标建筑", en: "Chinese Heritage Building" },
+    category: "location",
+    options: [
+      { cn: "天坛", en: "Temple of Heaven" },
+      { cn: "故宫（紫禁城）", en: "Forbidden City" },
+      { cn: "颐和园", en: "Summer Palace" },
+      { cn: "大雁塔", en: "Giant Wild Goose Pagoda" },
+      { cn: "布达拉宫", en: "Potala Palace" },
+      { cn: "拙政园", en: "Humble Administrator's Garden" },
+      { cn: "黄鹤楼", en: "Yellow Crane Tower" },
+      { cn: "岳阳楼", en: "Yueyang Tower" },
+      { cn: "滕王阁", en: "Tengwang Pavilion" },
+      { cn: "应县木塔", en: "Ying County Wooden Pagoda" },
+      { cn: "悬空寺", en: "Hanging Temple" }
+    ]
+  },
+
+  retro_device_theme: {
+    label: { cn: "老式设备品类", en: "Vintage Device Category" },
+    category: "item",
+    options: [
+      { cn: "老式电子设备", en: "vintage electronic devices" },
+      { cn: "老式家用电器", en: "vintage home appliances" },
+      { cn: "老式影音设备", en: "vintage audio and video equipment" },
+      { cn: "老式通讯设备", en: "vintage communication devices" },
+      { cn: "老式计算机与存储介质", en: "vintage computers and storage media" },
+      { cn: "80-90年代数码产品", en: "1980s–90s digital gadgets" }
+    ]
+  },
+
+  utility_app_category: {
+    label: { cn: "App 种类", en: "App Category" },
+    category: "other",
+    options: [
+      { cn: "植物照顾养护记录", en: "plant care and maintenance tracker" },
+      { cn: "运动健身打卡", en: "workout and fitness check-in" },
+      { cn: "饮水与饮食记录", en: "water intake and meal logging" },
+      { cn: "睡眠与作息管理", en: "sleep and daily routine" },
+      { cn: "习惯养成打卡", en: "habit tracking" },
+      { cn: "读书笔记与书单", en: "reading notes and book list" },
+      { cn: "宠物喂养与健康", en: "pet feeding and health log" },
+      { cn: "家庭记账与预算", en: "household budgeting" }
+    ]
+  },
+
+  subject_product: {
+    label: { cn: "主题产品", en: "Subject Product" },
+    category: "item",
+    options: [
+      { cn: "草莓苏打水", en: "Strawberry Soda" },
+      { cn: "榴莲冰淇淋", en: "Durian Ice Cream" },
+      { cn: "西柚香水", en: "Grapefruit Perfume" },
+      { cn: "抹茶拿铁", en: "Matcha Latte" },
+      { cn: "胶原蛋白面霜", en: "Collagen Face Cream" },
+      { cn: "燕麦奶", en: "Oat Milk" },
+      { cn: "蓝莓味口香糖", en: "Blueberry Gum" },
+      { cn: "薄荷香膏", en: "Peppermint Balm" },
+      { cn: "青苹果味能量饮料", en: "Green Apple Energy Drink" },
+      { cn: "薰衣草香薰蜡烛", en: "Lavender Scented Candle" },
+      { cn: "龙井茶", en: "Longjing Tea" }
+    ]
+  },
+
+  apple_style_product: {
+    label: { cn: "苹果风产品", en: "Apple Style Product" },
+    category: "item",
+    options: [
+      { cn: "3.5寸软盘", en: "3.5-inch Floppy Disk" },
+      { cn: "磁带", en: "Cassette Tape" },
+      { cn: "复古打字机", en: "Retro Typewriter" },
+      { cn: "胶卷相机", en: "Film Camera" },
+      { cn: "留声机", en: "Gramophone" },
+      { cn: "复古游戏机", en: "Retro Game Console" }
+    ]
+  },
+
+  layout_style_bento: {
+    label: { cn: "Bento 布局风格", en: "Bento Layout Style" },
+    category: "visual",
+    options: [
+      { cn: "BentoCard", en: "BentoCard" },
+      { cn: "模块化布局", en: "Modular Layout" },
+      { cn: "极简网格", en: "Minimalist Grid" },
+      { cn: "磁贴设计", en: "Tile Design" }
+    ]
   }
 };
 
@@ -3032,6 +3120,12 @@ export const INITIAL_DEFAULTS = {
   collab_theme_a: { cn: "小王子", en: "The Little Prince" },
   collab_theme_b: { cn: "SpaceX", en: "SpaceX" },
   card_game_collection: { cn: "中国古代诗人", en: "Ancient Chinese poets" },
-  ancient_celebrity: { cn: "苏轼", en: "Su Shi" }
+  ancient_celebrity: { cn: "苏轼", en: "Su Shi" },
+  heritage_building: { cn: "天坛", en: "Temple of Heaven" },
+  retro_device_theme: { cn: "老式电子设备", en: "vintage electronic devices" },
+  utility_app_category: { cn: "植物照顾养护记录", en: "plant care and maintenance tracker" },
+  subject_product: { cn: "草莓苏打水", en: "Strawberry Soda" },
+  apple_style_product: { cn: "3.5寸软盘", en: "3.5-inch Floppy Disk" },
+  layout_style_bento: { cn: "BentoCard", en: "BentoCard" }
 };
 

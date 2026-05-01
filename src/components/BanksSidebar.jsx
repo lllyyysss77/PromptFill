@@ -781,6 +781,7 @@ export const BanksSidebar = React.memo(({
                       onInsert={insertVariableToTemplate}
                       onDeleteOption={handleDeleteOption}
                       onAddOption={handleAddOption}
+                      onUpdateOption={handleUpdateOption}
                       onDeleteBank={handleDeleteBank}
                       onUpdateBankCategory={handleUpdateBankCategory}
                       onStartAddBank={handleStartAddBank}

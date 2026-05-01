@@ -1,5 +1,5 @@
 {
-  "version": "1.1.2",
+  "version": "1.1.3",
   "config": [
     {
       "id": "tpl_photo_grid",
@@ -2978,6 +2978,164 @@
         "en"
       ],
       "bestModel": "GPT-image-2",
+      "baseImage": "no_base_image"
+    },
+    {
+      "id": "tpl_heritage_building_deconstruction",
+      "name": {
+        "cn": "中式地标建筑拆解图",
+        "en": "Heritage Building Deconstruction"
+      },
+      "content": {
+        "cn": "生成一个{{heritage_building}}的建筑拆解图，有详细的说明，中式美学风格",
+        "en": "Generate an architectural deconstruction diagram of {{heritage_building}} with detailed annotations, in Chinese aesthetic style."
+      },
+      "imageUrl": "https://s3.bmp.ovh/2026/04/21/JCPtpHEd.jpg",
+      "author": "@tanshilong",
+      "selections": {
+        "heritage_building": {
+          "cn": "天坛",
+          "en": "Temple of Heaven"
+        }
+      },
+      "tags": [
+        "建筑",
+        "创意",
+        "图表"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ],
+      "bestModel": "GPT-image-2",
+      "baseImage": "no_base_image"
+    },
+    {
+      "id": "tpl_retro_skeuomorphic_icons",
+      "name": {
+        "cn": "复古拟物化设备图标",
+        "en": "Retro Skeuomorphic Device Icons"
+      },
+      "content": {
+        "cn": "生成一组复古拟物化风格的{{retro_device_theme}}图标，图中配有图标名称。",
+        "en": "Generate a set of vintage skeuomorphic {{retro_device_theme}} icons, each with its name labeled on the image."
+      },
+      "imageUrl": "https://s3.bmp.ovh/2026/04/21/8H5POly2.jpg",
+      "author": "@tanshilong",
+      "selections": {
+        "retro_device_theme": {
+          "cn": "老式电子设备",
+          "en": "vintage electronic devices"
+        }
+      },
+      "tags": [
+        "创意",
+        "产品",
+        "摄影"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ],
+      "bestModel": "GPT-image-2",
+      "baseImage": "no_base_image"
+    },
+    {
+      "id": "tpl_lifestyle_app_ui",
+      "name": {
+        "cn": "生活类 App 界面 UI",
+        "en": "Lifestyle App UI"
+      },
+      "content": {
+        "cn": "生成一个{{utility_app_category}}的移动端 App 界面 UI 设计，中文界面；现代简洁、卡片化布局、圆角与留白舒适、信息层级清晰、底部导航与状态栏完整。",
+        "en": "Generate a mobile app UI design for {{utility_app_category}}, Chinese interface; modern minimalist, card-based layout, comfortable rounded corners and whitespace, clear information hierarchy, bottom navigation and status bar."
+      },
+      "imageUrl": "https://s3.bmp.ovh/2026/04/21/2tys9tTD.png",
+      "author": "@tanshilong",
+      "selections": {
+        "utility_app_category": {
+          "cn": "植物照顾养护记录",
+          "en": "plant care and maintenance tracker"
+        }
+      },
+      "tags": [
+        "创意",
+        "产品",
+        "图表"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ],
+      "bestModel": "GPT-image-2",
+      "baseImage": "no_base_image"
+    },
+    {
+      "id": "tpl_minimalist_geometric_poster",
+      "name": {
+        "cn": "极简几何装置风海报",
+        "en": "Minimalist Geometric Product Poster"
+      },
+      "content": {
+        "cn": "请为{{subject_product}}创作一张“极简几何装置风产品海报”。\n\n如果我提供了产品图片，请以该图片为主要参考，保留产品的核心外观特征、包装形态、颜色、材质、品牌识别和整体气质，并优先沿用产品图中的主色调与配色关系进行设计。\n如果我没有提供产品图片，请根据{{subject_product}}自动生成符合该产品定位的产品外观与包装设计，并根据产品属性、品类特征和气质，自动匹配自然合理的主色、辅助色、道具造型与展示方式。\n\n海报整体风格要求：\n画面采用高键白色或暖白色摄影棚背景，整体干净、通透、柔和、明亮，具有高级商业感与现代品牌视觉气质。构图不是普通电商棚拍，而是像品牌视觉提案、艺术静物摄影与3D产品陈列结合的概念海报。\n\n画面主体应包含：\n1. {{subject_product}}本体\n2. 产品包装\n3. 与产品相关的原料、切片、部件、功能元素或材质细节\n\n三者共同构成完整的视觉链路，使观者一眼就能理解“这是什么产品、内容是什么、卖点或来源是什么”。\n\n场景中加入简洁且具有设计感的几何装置道具，例如：圆柱、方块、长条块、圆环、球体、半圆、平台、堆叠积木、亚克力支架、玩具感结构体等，用于承托、悬置、围绕或衬托产品主体，形成富有秩序感、节奏感和层次感的艺术陈列构图。\n\n整体配色应围绕产品本身自然展开，以产品关联色为主视觉核心，搭配白色、奶油色、浅灰色等中性色，必要时加入少量辅助点缀色，使画面颜色统一、克制、舒适、清爽，不杂乱、不花哨。不同产品应自动适配不同配色，不固定使用某一种背景色。\n\n材质表现要细腻真实，具有高质量商业渲染质感。透明塑料、亚克力、磨砂材质、纸质标签、玻璃、金属、光滑塑胶、果肉纹理、食材纹理或产品表面细节都应自然可信。可以有轻微反射与柔和阴影，但不要过重、不要脏乱。\n\n构图要求留白充足，主体明确，画面平衡，视觉整洁，具有轻松、温和、现代、精致、亲和、带一点童趣但不幼稚的品牌气质。整体感觉像一张高审美的品牌产品KV海报，非常适合电商主视觉、社交媒体种草图、产品展示图。\n\n输出要求：\n- 竖版构图\n- 3:4 比例\n- 单张海报\n- 高级感、简洁感、品牌感强",
+        "en": "Please create a \"Minimalist Geometric Installation Style Product Poster\" for {{subject_product}}.\n\nIf I provide a product image, please use it as the main reference, preserving the product's core appearance features, packaging form, color, material, brand identity, and overall temperament, and prioritize using the primary color tone and color relationships from the product image for the design.\nIf I do not provide a product image, please automatically generate a product appearance and packaging design that fits the {{subject_product}}'s positioning, and match naturally reasonable primary and auxiliary colors, prop shapes, and display methods based on the product attributes, category characteristics, and temperament.\n\nOverall Poster Style Requirements:\nThe image uses a high-key white or warm white studio background, overall clean, transparent, soft, and bright, with a high-end commercial feel and modern brand visual temperament. The composition is not a common e-commerce studio shot, but a conceptual poster combining brand visual proposals, artistic still-life photography, and 3D product displays.\n\nThe main subject of the image should include:\n1. The {{subject_product}} itself\n2. Product packaging\n3. Raw materials, slices, components, functional elements, or material details related to the product\n\nThese three together form a complete visual chain, allowing viewers to immediately understand \"what this product is, what the content is, and what the selling point or source is.\"\n\nIncorporate simple and design-oriented geometric installation props into the scene, such as: cylinders, blocks, long strips, rings, spheres, semicircles, platforms, stacked blocks, acrylic stands, toy-like structures, etc., used to support, suspend, surround, or set off the main product, forming an artistic display composition with a sense of order, rhythm, and layering.\n\nThe overall color palette should naturally revolve around the product itself, with the product's associated colors as the visual core, paired with neutral colors like white, cream, and light gray. Add small amounts of auxiliary accent colors when necessary to keep the image color unified, restrained, comfortable, and fresh, without being cluttered or gaudy. Different products should automatically adapt to different color schemes; do not use a fixed background color.\n\nMaterial representation should be delicate and realistic, with a high-quality commercial rendering texture. Transparent plastic, acrylic, frosted materials, paper labels, glass, metal, smooth plastic, fruit pulp texture, food texture, or product surface details should all be natural and believable. There can be slight reflections and soft shadows, but not too heavy or messy.\n\nComposition requirements call for ample white space, clear subject matter, a balanced image, and visual tidiness, with a brand temperament that is relaxed, gentle, modern, exquisite, approachable, and slightly playful but not childish. The overall feel is like a high-aesthetic brand product KV poster, very suitable for e-commerce key visuals, social media grass-planting posts, and product display images.\n\nOutput requirements:\n- Vertical composition\n- 3:4 ratio\n- Single poster\n- Strong sense of high-end quality, simplicity, and branding"
+      },
+      "imageUrl": "https://s3.bmp.ovh/2026/04/24/xWHKmpbh.png",
+      "imageUrls": [
+        "https://s3.bmp.ovh/2026/04/24/xWHKmpbh.png",
+        "https://s3.bmp.ovh/2026/04/24/rahDopFT.png"
+      ],
+      "author": "@MrLarus",
+      "selections": {
+        "subject_product": {
+          "cn": "草莓苏打水",
+          "en": "Strawberry Soda"
+        }
+      },
+      "tags": [
+        "产品",
+        "创意",
+        "摄影"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ],
+      "bestModel": "GPT-image-2",
+      "baseImage": "no_base_image"
+    },
+    {
+      "id": "tpl_apple_event_bento",
+      "name": {
+        "cn": "苹果风格 BentoCard 发布会单页",
+        "en": "Apple Style BentoCard Event Slide"
+      },
+      "content": {
+        "cn": "生成一页苹果风格的发布会图片，以{{layout_style_bento}}形式呈现最新一代的{{apple_style_product}}的宣传页",
+        "en": "Generate an Apple-style event keynote slide, presenting the latest generation of {{apple_style_product}} in a {{layout_style_bento}} format."
+      },
+      "imageUrl": "https://s3.bmp.ovh/2026/04/24/loHTJhoH.png",
+      "author": "@tanshilong",
+      "selections": {
+        "apple_style_product": {
+          "cn": "3.5寸软盘",
+          "en": "3.5-inch Floppy Disk"
+        },
+        "layout_style_bento": {
+          "cn": "BentoCard",
+          "en": "BentoCard"
+        }
+      },
+      "tags": [
+        "产品",
+        "创意",
+        "图表"
+      ],
+      "language": [
+        "cn",
+        "en"
+      ],
+      "bestModel": "Gpt-image-2",
       "baseImage": "no_base_image"
     }
   ]
